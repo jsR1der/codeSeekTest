@@ -17,6 +17,9 @@
     color: var(--textActive);
   }
 }
+.checked {
+  border: 1px solid var(--textInactive);
+}
 
 .active {
   background-color: var(--active);
