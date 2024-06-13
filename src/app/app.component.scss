@@ -10,3 +10,10 @@ main {
   border-radius: 10px;
 }
 
+
+@media screen and (max-width: 360px) {
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  }
+}
+
