@@ -1,0 +1,12 @@
+<div class="step"
+     [class.inactive]="selectedStep < stepService.selectedStep"
+     [class.active]="selectedStep === stepService.selectedStep">
+  <label class="label">{{ step.label }}</label>
+  <div class="body">
+    <app-step-indicator
+      class="indicator-container"
+      [selectedStep]="selectedStep">
+    </app-step-indicator>
+  </div>
+</div>
+

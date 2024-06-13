@@ -1,0 +1,17 @@
+<!--ACTIVE-->
+<div *ngIf="selectedStep === stepService.selectedStep"
+     (click)="stepService.selectStep(selectedStep)"
+     class="indicator active">
+  {{ selectedStep + 1 }}
+</div>
+<!--INACTIVE-->
+<div *ngIf="selectedStep > stepService.selectedStep"
+     (click)="stepService.selectStep(selectedStep)"
+     class="indicator">
+  {{ selectedStep + 1 }}
+</div>
+<!--CHECKED-->
+<img *ngIf="selectedStep < stepService.selectedStep"
+     (click)="stepService.selectStep(selectedStep)"
+     class="indicator checked"
+     src="/assets/checkP.png"/>

@@ -1,0 +1,49 @@
+@use 'src/styles/variables' as *;
+
+.step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .label {
+    color: var(--textInactive);
+    font-size: 1rem;
+    line-height: 22px;
+  }
+
+  .body {
+    transition: $transition;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+    min-height: 5px;
+    position: relative;
+  }
+}
+
+.indicator-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.active {
+  .body {
+    background-color: var(--active);
+    color: var(--textActive);
+  }
+
+  .label {
+    color: var(--textActive);
+  }
+}
+
+.inactive {
+  .body {
+    background-color: var(--inactive);
+  }
+}

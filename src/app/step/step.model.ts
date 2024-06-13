@@ -1,1 +1,3 @@
-export interface
+export interface StepModel {
+  label: string;
+}

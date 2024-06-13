@@ -1,0 +1,23 @@
+@use 'src/styles/variables' as *;
+
+.indicator {
+  transition: $transition;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: var(--inactive);
+
+  &:hover {
+    background-color: var(--active);
+    transition: $transition;
+    color: var(--textActive);
+  }
+}
+
+.active {
+  background-color: var(--active);
+}
